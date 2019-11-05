@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <textarea id="code">
+      import 'lodash';
+      // TODO импортируем auth provider
+      //import 'jquery';
+      
+ 
+      /*
+      Some very important comment
+      */
+      </textarea
+    >
+    <br />
+    <button onclick="removeAllComments()">Remove All Comments</button>
+
+    <script>
+      function removeAllComments() {
+        let str = document
+          .getElementById('code')
+          .innerHTML.replace(
+            /(\/\*[\wа-я\'\s\r\n\*]*\*\/)|(\/\/[\wа-я\s\'\;]*)|(\<![\-\-\s\wа-я\>\/]*\>)/gi,
+            '',
+          );
+        document.getElementById('code').innerHTML = str;
+      }
+    </script>
+  </body>
+</html>
